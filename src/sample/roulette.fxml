@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefWidth="530.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <top>
+      <Label text="Roulette Game" textAlignment="CENTER" textFill="#238023" wrapText="true" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Arial Bold Italic" size="36.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+   <left>
+      <ImageView fitHeight="450.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../tabellone.jpg" />
+         </image>
+      </ImageView>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="10.0" layoutY="10.0" text="Bet on numbers" textFill="#c46a44">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="60.0" />
+               </VBox.margin>
+            </Label>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="121.0" minWidth="10.0" prefWidth="121.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="79.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label id="number" text="Number of bet" textFill="#938686">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="numberOfBet" maxWidth="110.0" prefWidth="55.0" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label id="number" text="Insert number" textFill="#938686" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="number" maxWidth="110.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label id="amount" alignment="CENTER" contentDisplay="CENTER" text="Amount" textAlignment="CENTER" textFill="#938686" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="45.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="amount" maxWidth="110.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button fx:id="send1" mnemonicParsing="false" onAction="#pressedSend1" text="Send" textFill="#938686" GridPane.columnIndex="2">
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="send3" mnemonicParsing="false" onAction="#pressedSend3" text="Send" textFill="#938686" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets left="30.0" />
+               </VBox.margin>
+            </GridPane>
+            <Separator prefHeight="0.0" prefWidth="172.0">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Separator>
+            <Label layoutX="10.0" layoutY="10.0" text="Bet on Even/Odd" textFill="#c46a44">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="60.0" right="10.0" top="10.0" />
+               </padding>
+            </Label>
+            <Label text="Amount" textFill="#938686">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="120.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="amount2" maxWidth="110.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="100.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <HBox>
+               <children>
+                  <CheckBox fx:id="even" mnemonicParsing="false" onAction="#evenSelected" text="Even" textFill="#938686">
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="70.0" right="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="odd" mnemonicParsing="false" onAction="#oddSelected" text="Odd" textFill="#938686">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </CheckBox>
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </Separator>
+            <Label layoutX="10.0" layoutY="143.0" text="Bet on Red/Black" textFill="#c46a44">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="60.0" right="10.0" top="10.0" />
+               </padding>
+            </Label>
+            <Label text="Amount" textFill="#938686">
+               <padding>
+                  <Insets bottom="10.0" left="120.0" />
+               </padding>
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="amount3" maxWidth="110.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="100.0" />
+               </VBox.margin>
+            </TextField>
+            <HBox layoutX="10.0" layoutY="186.0">
+               <children>
+                  <CheckBox fx:id="red" mnemonicParsing="false" onAction="#redSelected" text="Red" textFill="#c65144">
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="70.0" right="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="black" mnemonicParsing="false" onAction="#blackSelected" text="Black">
+                     <HBox.margin>
+                        <Insets left="55.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </CheckBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="bet1" mnemonicParsing="false" onAction="#bet1Pressed" text="Bet" textFill="#c46a44">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="40.0" left="20.0" top="60.0" />
+               </VBox.margin>
+            </Button>
+            <Separator prefWidth="200.0">
+               <VBox.margin>
+                  <Insets top="3.0" />
+               </VBox.margin>
+            </Separator>
+            <Button fx:id="bet2" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#bet2Pressed" text="Bet" textFill="#c46a44">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" top="65.0" />
+               </VBox.margin>
+            </Button>
+            <Separator prefWidth="200.0">
+               <VBox.margin>
+                  <Insets top="55.0" />
+               </VBox.margin>
+            </Separator>
+            <Button fx:id="bet3" layoutX="10.0" layoutY="47.0" mnemonicParsing="false" onAction="#bet3Pressed" text="Bet" textFill="#c46a44">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" top="50.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </right>
+   <bottom>
+      <VBox prefHeight="148.0" prefWidth="410.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Game Results" textFill="#c46a44">
+               <font>
+                  <Font name="Arial Bold" size="28.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="185.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextArea fx:id="output" prefWidth="200.0" />
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>
