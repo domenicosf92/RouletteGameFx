@@ -49,7 +49,7 @@
                   <Insets left="60.0" />
                </VBox.margin>
             </Label>
-            <GridPane>
+            <GridPane prefHeight="87.0" prefWidth="293.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="121.0" minWidth="10.0" prefWidth="121.0" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="79.0" />
@@ -57,45 +57,49 @@
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label id="number" text="Number of bet" textFill="#938686">
+                  <Label id="number" text="Initial Money" textFill="#938686">
                      <font>
                         <Font name="Arial Bold" size="16.0" />
                      </font>
                      <GridPane.margin>
-                        <Insets />
+                        <Insets left="10.0" />
                      </GridPane.margin>
                   </Label>
-                  <TextField fx:id="numberOfBet" maxWidth="110.0" prefWidth="55.0" GridPane.columnIndex="1">
+                  <TextField fx:id="initialMoney" maxWidth="110.0" prefWidth="55.0" GridPane.columnIndex="1">
                      <GridPane.margin>
                         <Insets />
                      </GridPane.margin>
                   </TextField>
-                  <Label id="number" text="Insert number" textFill="#938686" GridPane.rowIndex="1">
+                  <Label id="number" text="Insert number" textFill="#938686" GridPane.rowIndex="2">
                      <font>
                         <Font name="Arial Bold" size="16.0" />
                      </font>
                      <GridPane.margin>
-                        <Insets />
+                        <Insets bottom="20.0" top="10.0" />
                      </GridPane.margin>
                   </Label>
-                  <TextField fx:id="number" maxWidth="110.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <TextField fx:id="number" maxWidth="110.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <GridPane.margin>
-                        <Insets />
+                        <Insets bottom="20.0" top="10.0" />
                      </GridPane.margin>
                   </TextField>
-                  <Label id="amount" alignment="CENTER" contentDisplay="CENTER" text="Amount" textAlignment="CENTER" textFill="#938686" GridPane.rowIndex="2">
+                  <Label id="amount" alignment="CENTER" contentDisplay="CENTER" text="Amount" textAlignment="CENTER" textFill="#938686" GridPane.rowIndex="3">
                      <font>
                         <Font name="Arial Bold" size="16.0" />
                      </font>
                      <GridPane.margin>
-                        <Insets left="45.0" />
+                        <Insets left="45.0" top="5.0" />
                      </GridPane.margin>
                   </Label>
-                  <TextField fx:id="amount" maxWidth="110.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="amount" maxWidth="110.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets top="5.0" />
+                     </GridPane.margin></TextField>
                   <Button fx:id="send1" mnemonicParsing="false" onAction="#pressedSend1" text="Send" textFill="#938686" GridPane.columnIndex="2">
                      <GridPane.margin>
                         <Insets left="15.0" />
@@ -104,14 +108,17 @@
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Button>
-                  <Button fx:id="send3" mnemonicParsing="false" onAction="#pressedSend3" text="Send" textFill="#938686" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <Button fx:id="send3" mnemonicParsing="false" onAction="#pressedSend3" text="Send" textFill="#938686" GridPane.columnIndex="2" GridPane.rowIndex="3">
                      <GridPane.margin>
-                        <Insets left="15.0" />
+                        <Insets bottom="40.0" left="15.0" top="15.0" />
                      </GridPane.margin>
                      <font>
                         <Font name="Arial Bold" size="14.0" />
                      </font>
                   </Button>
+                  <Separator prefWidth="200.0" GridPane.rowIndex="1" />
+                  <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Separator prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                </children>
                <VBox.margin>
                   <Insets left="30.0" />
@@ -255,15 +262,30 @@
    <bottom>
       <VBox prefHeight="148.0" prefWidth="410.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Game Results" textFill="#c46a44">
+            <Label text="Extracted Number" textFill="#c46a44">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="200.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="extractArea" maxWidth="100.0" minWidth="100.0" prefWidth="100.0">
+               <VBox.margin>
+                  <Insets left="230.0" />
+               </VBox.margin></TextField>
+            <Label layoutX="195.0" layoutY="20.0" text="Game Results" textFill="#c46a44">
                <font>
                   <Font name="Arial Bold" size="28.0" />
                </font>
                <VBox.margin>
-                  <Insets bottom="10.0" left="185.0" top="10.0" />
+                  <Insets left="185.0" top="20.0" />
                </VBox.margin>
             </Label>
-            <TextArea fx:id="output" prefWidth="200.0" />
+            <TextArea fx:id="output" minHeight="100.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin></TextArea>
          </children>
       </VBox>
    </bottom>

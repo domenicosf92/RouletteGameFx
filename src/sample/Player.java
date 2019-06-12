@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Player {
     private String name;
-    private double credit;
+    private int credit;
     ArrayList<Integer> numbers = new ArrayList<>();
     ArrayList<Integer> bets = new ArrayList<>();
 
@@ -13,7 +13,7 @@ public class Player {
         this.bets.add(bet);
     }
 
-    public Player(String name, double credit) {
+    public Player(String name, int credit) {
         this.name = name;
         this.credit = credit;
     }
